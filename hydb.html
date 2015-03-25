@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/hydb.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+	<script type="text/javascript" src="js/hydb.js"></script>
+	<meta charset="UTF-8">
+	<title></title>
+
+</head>
+<body>
+	<div class="container">
+		<div id="nav">
+			<ul class="nav navbar-nav">
+				<li class="active"><a data-toggle="tab" href="#">行业地位</a></li>
+				<li><a data-toggle="tab" href="#">行业新闻</a></li>
+			</ul>
+		</div>
+		<div id="hydw" class="panel panel-default">
+			<div class="panel-heading">行业地位</div>
+			<div class="panel-body">
+				<div>
+					<span>三级行业分类: </span><span>电子 -- 电子制造 -- 电子零部件制造 （共<span>21</span>家）</span>
+					<div class="pull-right form-inline">
+						<span>报告期</span>
+						<select class="form-control">
+							<option>2014-12-31</option>
+							<option>2014-09-30</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a data-toggle="tab" href="#">每股收益</a></li>
+							<li><a data-toggle="tab" href="#">每股净资产</a></li>
+							<li><a data-toggle="tab" href="#">每股现金流</a></li>
+							<li><a data-toggle="tab" href="#">净利润</a></li>
+							<li><a data-toggle="tab" href="#">营业收入</a></li>
+							<li><a data-toggle="tab" href="#">总资产</a></li>
+							<li><a data-toggle="tab" href="#">净资产收益率</a></li>
+							<li><a data-toggle="tab" href="#">股东权益比例</a></li>
+							<li><a data-toggle="tab" href="#">销售毛利率</a></li>
+							<li><a data-toggle="tab" href="#">总股本</a></li>
+						</ul>
+					</div>
+					<!--排名柱状图-->
+					<div id="fieldsChart" class="col-md-12">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="hyxw">
+		</div>
+		<div>
+			<span>注：当前行业中超过30%的个股发布了最新一期报告时进行数据统计。</span>
+			<span class="pull-right">查看更详细介绍&nbsp;&nbsp;<span id="more" class="glyphicon glyphicon-plus"></span></span>
+		</div>
+		<div id="hy2_div">
+			<div id="hy2_nav">
+				<ul class="nav navbar-nav">
+					<li class="active"><a data-toggle="tab" href="#">2014-09-30</a></li>
+					<li><a data-toggle="tab" href="#">2014-12-31</a></li>
+				</ul>
+			</div>
+			<div id="hy2_table">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<th>股票代码</th>
+						<th>股票简称</th>
+						<th>排名</th>
+						<th>每股收益(元)</th>
+						<th>每股净资产(元)</th>
+						<th>每股现金流(元)</th>
+						<th>净利润(亿元)</th>
+						<th>营业收入(亿元)</th>
+						<th>总资产(亿元)</th>
+						<th>净资产收益率(%)</th>
+						<th>股东权益比例(%)</th>
+						<th>销售毛利率(%)</th>
+						<th>总股本(亿股)</th>
+					</thead>
+					<tbody>
+					<tr>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+					</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
