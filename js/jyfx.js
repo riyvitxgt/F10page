@@ -27,6 +27,13 @@ var data3 = [
 ];
 /*模拟数据结束*/
 $(function () {
+
+    $("#myTab a").click(function(){
+       var tabNow = ($(this).attr('name'));
+        var t = $(tabNow).offset().top;
+        $(window).scrollTop(t);
+    });
+
     var drawData = getDate();
     drawPieCharts(drawData);
 
@@ -36,8 +43,9 @@ $(function () {
         $(this).addClass("btn-select");
     });
 
+
     /*点击按钮重新获取数据生成饼图*/
-    $("#chartContent ul li").click(function(){
+    $("#chartContent ul li[role='presentation']").click(function(){
         drawPieCharts(getDate());
     });
 
@@ -113,3 +121,4 @@ function drawPieCharts(data){
         });
     }
 }
+

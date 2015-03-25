@@ -8,6 +8,9 @@
     <script type="text/javascript" src="js/jyfx.js"></script>
 	<meta charset="UTF-8">
     <style>
+        #myTab{
+            background-color: #fffdf4;
+        }
         .chart_line td{
             height: 200px;
         }
@@ -18,144 +21,162 @@
         }
         h4{
             background-color: #ddd;
+            border-top: 3px solid #204d74;
+            border-left: 5px solid #204d74;
+            padding: 5px;
         }
     </style>
 	<title></title>
 </head>
 <body>
-	<div id="introduce">
-		<h4>主营介绍</h4>
-		<table class="table table-bordered">
-			<tbody>
-				<tr>
-					<td>
-						<span>产品类型:</span><p></p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>产品名称:</span><p></p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<span>经营范围:</span><p></p>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div>
-		<h4>主营构成分析</h4>
-        <div id="chartContent">
-            <ul class="nav nav-pills">
-                <li role="presentation" class="btn-select"><a>营业收入</a> </li>
-                <li role="presentation"><a>营业成本</a> </li>
-                <li role="presentation"><a>利润比例</a> </li>
-                <li class="pull-right">
-                    <div class="form-inline">
-                        <span >报告期</span>
-                        <select id="dataSelect" class="form-control">
-                            <option value="1">2014-06-30</option>
-                            <option value="2">2013-12-31</option>
-                            <option value="3">201-06-30</option>
-                        </select>
-                    </div>
-
-                </li>
-            </ul>
-
-            <div class="charts">
-                <table class="table table-bordered table-responsive">
-                    <tr class="chart_line">
-                        <td class="col-md-4" id="chart1"></td>
-                        <td class="col-md-4" id="chart2"></td>
-                        <td class="col-md-4" id="chart3"></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <div>
-            <ul class="nav nav-pills">
-                <li role="presentation"><a href="#">2014-06-30</a> </li>
-                <li role="presentation"><a href="#">2013-12-31</a> </li>
-                <li role="presentation"><a href="#">201-06-30</a> </li>
-                <li class="pull-right"><span class="tip">注：通常在中报、年报时披露</span></li>
-            </ul>
-            <table class="table table-bordered table-hover">
-                <thead class="active">
-                    <td colspan="2">业务名称</td>
-                    <td>营业收入(万元)</td>
-                    <td>收入比例</td>
-                    <td>营业成本(万元)</td>
-                    <td>成本比例</td>
-                    <td>利润比例</td>
-                    <td>毛利率</td>
-                </thead>
+    <div id="myTab">
+        <ul class="nav nav-pills">
+            <li class="active"><a id="tab1" name="#zyjs">主营介绍</a></li>
+            <li><a id="tab2" name="#zyjcfx">主营构成分析</a></li>
+            <li><a id="tab4" name="#dshjyps">董事会经营评述</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="zyjs">
+            <h4>主营介绍</h4>
+            <table class="table table-bordered">
                 <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <span>产品类型:</span><p></p>
+                    </td>
                 </tr>
                 <tr>
-                    <td rowspan="3"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <span>产品名称:</span><p></p>
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td rowspan="2"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <span>经营范围:</span><p></p>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-	</div>SS
+
+        <div id="zyjcfx">
+            <h4>主营构成分析</h4>
+            <div id="chartContent">
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="btn-select"><a>营业收入</a> </li>
+                    <li role="presentation"><a>营业成本</a> </li>
+                    <li role="presentation"><a>利润比例</a> </li>
+                    <li class="pull-right">
+                        <div class="form-inline">
+                            <span >报告期</span>
+                            <select id="dataSelect" class="form-control">
+                                <option value="1">2014-06-30</option>
+                                <option value="2">2013-12-31</option>
+                                <option value="3">201-06-30</option>
+                            </select>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <div class="charts">
+                    <table class="table table-bordered table-responsive">
+                        <tr class="chart_line">
+                            <td class="col-md-4" id="chart1"></td>
+                            <td class="col-md-4" id="chart2"></td>
+                            <td class="col-md-4" id="chart3"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="btn-select"><a>2014-06-30</a> </li>
+                    <li role="presentation"><a>2013-12-31</a> </li>
+                    <li role="presentation"><a>201-06-30</a> </li>
+                    <li class="pull-right"><span class="tip">注：通常在中报、年报时披露</span></li>
+                </ul>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr class="info">
+                        <td colspan="2">业务名称</td>
+                        <td>营业收入(万元)</td>
+                        <td>收入比例</td>
+                        <td>营业成本(万元)</td>
+                        <td>成本比例</td>
+                        <td>利润比例</td>
+                        <td>毛利率</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="dshjyps">
+            <h4>懂事会经营评述</h4>
+        </div>
+    </div>
 
 </body>
 </html>
