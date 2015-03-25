@@ -14,15 +14,22 @@
 </head>
 <body>
 	<div class="container">
+        <!--头部导航-->
 		<div id="nav">
-			<ul class="nav navbar-nav">
+			<ul class="nav nav-pills">
 				<li class="active"><a data-toggle="tab" href="#">行业地位</a></li>
 				<li><a data-toggle="tab" href="#">行业新闻</a></li>
 			</ul>
 		</div>
+        <!--头部导航结束-->
+
+        <!--行业地位-->
 		<div id="hydw" class="panel panel-default">
+            <!--行业地位头-->
 			<div class="panel-heading">行业地位</div>
+            <!--行业地位内容-->
 			<div class="panel-body">
+                <!--三级行业-->
 				<div>
 					<span>三级行业分类: </span><span>电子 -- 电子制造 -- 电子零部件制造 （共<span>21</span>家）</span>
 					<div class="pull-right form-inline">
@@ -33,77 +40,258 @@
 						</select>
 					</div>
 				</div>
-				<div>
-					<div>
-						<ul class="nav navbar-nav">
-							<li class="active"><a data-toggle="tab" href="#">每股收益</a></li>
-							<li><a data-toggle="tab" href="#">每股净资产</a></li>
-							<li><a data-toggle="tab" href="#">每股现金流</a></li>
-							<li><a data-toggle="tab" href="#">净利润</a></li>
-							<li><a data-toggle="tab" href="#">营业收入</a></li>
-							<li><a data-toggle="tab" href="#">总资产</a></li>
-							<li><a data-toggle="tab" href="#">净资产收益率</a></li>
-							<li><a data-toggle="tab" href="#">股东权益比例</a></li>
-							<li><a data-toggle="tab" href="#">销售毛利率</a></li>
-							<li><a data-toggle="tab" href="#">总股本</a></li>
-						</ul>
-					</div>
-					<!--排名柱状图-->
-					<div id="fieldsChart" class="col-md-12">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="hyxw">
-		</div>
-		<div>
-			<span>注：当前行业中超过30%的个股发布了最新一期报告时进行数据统计。</span>
-			<span class="pull-right">查看更详细介绍&nbsp;&nbsp;<span id="more" class="glyphicon glyphicon-plus"></span></span>
-		</div>
-		<div id="hy2_div">
-			<div id="hy2_nav">
-				<ul class="nav navbar-nav">
-					<li class="active"><a data-toggle="tab" href="#">2014-09-30</a></li>
-					<li><a data-toggle="tab" href="#">2014-12-31</a></li>
-				</ul>
-			</div>
-			<div id="hy2_table">
-				<table class="table table-bordered table-hover">
-					<thead>
-						<th>股票代码</th>
-						<th>股票简称</th>
-						<th>排名</th>
-						<th>每股收益(元)</th>
-						<th>每股净资产(元)</th>
-						<th>每股现金流(元)</th>
-						<th>净利润(亿元)</th>
-						<th>营业收入(亿元)</th>
-						<th>总资产(亿元)</th>
-						<th>净资产收益率(%)</th>
-						<th>股东权益比例(%)</th>
-						<th>销售毛利率(%)</th>
-						<th>总股本(亿股)</th>
-					</thead>
-					<tbody>
-					<tr>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-						<td>a</td>
-					</tr>
+                <div>
+                    <div>
+                        <ul class="nav nav-pills">
+                            <li class="active"><a data-toggle="tab" href="#">每股收益</a></li>
+                            <li><a data-toggle="tab" href="#">每股净资产</a></li>
+                            <li><a data-toggle="tab" href="#">每股现金流</a></li>
+                            <li><a data-toggle="tab" href="#">净利润</a></li>
+                            <li><a data-toggle="tab" href="#">营业收入</a></li>
+                            <li><a data-toggle="tab" href="#">总资产</a></li>
+                            <li><a data-toggle="tab" href="#">净资产收益率</a></li>
+                            <li><a data-toggle="tab" href="#">股东权益比例</a></li>
+                            <li><a data-toggle="tab" href="#">销售毛利率</a></li>
+                            <li><a data-toggle="tab" href="#">总股本</a></li>
+                        </ul>
+                    </div>
+                    <!--排名柱状图-->
+                    <div id="fieldsChart"></div>
+                </div>
+                <div>
+                    <span>注：当前行业中超过30%的个股发布了最新一期报告时进行数据统计。</span>
+                    <span class="pull-right">查看更详细介绍&nbsp;&nbsp;<span id="hy3" class="hide-toggle glyphicon glyphicon-plus"></span></span>
+                </div>
+                <!--三级行业隐藏表格-->
+                <div id="hy3_div">
+                    <div id="hy3_nav">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a data-toggle="tab" href="#">2014-09-30</a></li>
+                            <li><a data-toggle="tab" href="#">2014-12-31</a></li>
+                        </ul>
+                    </div>
+                    <div id="hy3_table">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <th>股票代码</th>
+                            <th>股票简称</th>
+                            <th>排名</th>
+                            <th>每股收益(元)</th>
+                            <th>每股净资产(元)</th>
+                            <th>每股现金流(元)</th>
+                            <th>净利润(亿元)</th>
+                            <th>营业收入(亿元)</th>
+                            <th>总资产(亿元)</th>
+                            <th>净资产收益率(%)</th>
+                            <th>股东权益比例(%)</th>
+                            <th>销售毛利率(%)</th>
+                            <th>总股本(亿股)</th>
+                            </thead>
+                            <tbody>
+                                <!--用JS去填充表格内容-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--三级行业结束-->
+                <div class="clearfix"></div>
+                <hr>
+                <!--二级行业-->
+                <div>
+                    <span>二级行业分类: </span><span>电子 -- 电子制造 -- 电子零部件制造 （共<span>21</span>家）</span>
+                    <div class="pull-right form-inline">
+                        <span>报告期</span>
+                        <select class="form-control">
+                            <option>2014-12-31</option>
+                            <option>2014-09-30</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <ul class="nav nav-pills">
+                            <li class="active"><a data-toggle="tab" href="#">每股收益</a></li>
+                            <li><a data-toggle="tab" href="#">每股净资产</a></li>
+                            <li><a data-toggle="tab" href="#">每股现金流</a></li>
+                            <li><a data-toggle="tab" href="#">净利润</a></li>
+                            <li><a data-toggle="tab" href="#">营业收入</a></li>
+                            <li><a data-toggle="tab" href="#">总资产</a></li>
+                            <li><a data-toggle="tab" href="#">净资产收益率</a></li>
+                            <li><a data-toggle="tab" href="#">股东权益比例</a></li>
+                            <li><a data-toggle="tab" href="#">销售毛利率</a></li>
+                            <li><a data-toggle="tab" href="#">总股本</a></li>
+                        </ul>
+                    </div>
+                    <!--排名柱状图-->
+                    <div id="fieldsChart2" class="col-md-12">
+                    </div>
+                    <div>
+                        <span>注：当前行业中超过30%的个股发布了最新一期报告时进行数据统计。</span>
+                        <span class="pull-right">查看更详细介绍&nbsp;&nbsp;<span id="hy2" class="hide-toggle glyphicon glyphicon-plus"></span></span>
+                    </div>
+                    <!--二级行业隐藏表格-->
+                    <div id="hy2_div">
+                        <div id="hy2_nav">
+                            <ul class="nav nav-pills">
+                                <li class="active"><a data-toggle="tab" href="#">2014-09-30</a></li>
+                                <li><a data-toggle="tab" href="#">2014-12-31</a></li>
+                            </ul>
+                        </div>
+                        <div id="hy2_table">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                    <th>股票代码</th>
+                                    <th>股票简称</th>
+                                    <th>排名</th>
+                                    <th>每股收益(元)</th>
+                                    <th>每股净资产(元)</th>
+                                    <th>每股现金流(元)</th>
+                                    <th>净利润(亿元)</th>
+                                    <th>营业收入(亿元)</th>
+                                    <th>总资产(亿元)</th>
+                                    <th>净资产收益率(%)</th>
+                                    <th>股东权益比例(%)</th>
+                                    <th>销售毛利率(%)</th>
+                                    <th>总股本(亿股)</th>
+                                </thead>
+                                <tbody>
 
-					</tbody>
-				</table>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--二级行业结束-->
 			</div>
+		</div>
+        <!--行业地位结束-->
+        <!--行业新闻-->
+		<div id="hyxw" class="panel panel-default">
+            <div class="panel-heading">行业新闻<span class="pull-right"><a href="#">更多</a> </span> </div>
+            <!--行业新闻内容-->
+            <div class="panel-body">
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                        中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                            中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                            中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                            中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                            中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                            中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                            中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-left panel-info">
+                    <div class="panel-heading">
+                        <span>标题：</span>
+                        <span><a>XXXXXXXXXXXXXXXXXXXX</a></span>
+                        <span class="pull-right">04/05 22:41</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>其中广告营收1.819亿美元，较上年同期增长14%，网络广告营收增长主要由于微博广告营收增长3190万美元。
+                            中国软件资讯网3月11日消息 新浪今日公布了截至2014年12月31日第四季度未经审计的财报。报告显示，期内净营收2.111
+                        </p>
+                        <div class="pull-right">
+                            <a class="pull-right" href="#"> 查看全文>></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 		</div>
 	</div>
 </body>

@@ -1,19 +1,36 @@
+.panel-info{
+    height: 150px;
+    margin-bottom: 20px;
+}
+.panel-info .panel-body{
+    background-color: #d9d9d9;
+}
 #nav{
     display: table;
     width: auto;
     margin-left: auto;
     margin-right: auto;
 }
-#fieldsChart{
+dl{
+    height: 150px;
+    border-bottom: 1px solid #000000;
+}
+.nav{
+    margin-top: 10px;
+}
+#fieldsChart, #fieldsChart2{
     height: 190px;
     border: 2px solid #dcdcdc;
 }
-#more{
+.hide-toggle{
     color: #50c9dc;
     cursor:pointer;
     border: 1px solid #bbb;
     padding: 0.5px;
 }
-#hy2_div{
+hr{
+    border-top:1px solid #000000;
+}
+#hy2_div, #hy3_div{
     display: none;
 }

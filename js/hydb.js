@@ -4,13 +4,14 @@
 
 $(function(){
     //drawColumn();
-    $("#more").click(function(){
+    $(".hide-toggle").click(function(){
+        var div = $(this).attr('id');
         if($(this).hasClass("glyphicon-plus")){
             $(this).removeClass('glyphicon-plus').addClass('glyphicon-minus');
-            $("#hy2_div").show();
+            $("#" + div + "_div").show();
         }else{
             $(this).removeClass('glyphicon-minus').addClass('glyphicon-plus');
-            $("#hy2_div").hide();
+            $("#" + div + "_div").hide();
         }
     });
 });
