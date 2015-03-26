@@ -2,6 +2,24 @@
  * Created by zhukm on 2015/3/25.
  */
 
+var dataObj = {
+    code:'600570',
+    jc:'hs',
+    pm:1,
+    mgsy:3,
+    mgjzc:8,
+    mgxjl:3,
+    jll:1.2,
+    yysl:4,
+    zzc:8,
+    jzcsyl:2,
+    gdqybl:3,
+    xsmll:5,
+    zgb:4
+}
+
+var dataArr = [dataObj,dataObj,dataObj,dataObj,dataObj];
+
 $(function(){
     //drawColumn();
     $(".hide-toggle").click(function(){
@@ -9,12 +27,26 @@ $(function(){
         if($(this).hasClass("glyphicon-plus")){
             $(this).removeClass('glyphicon-plus').addClass('glyphicon-minus');
             $("#" + div + "_div").show();
+            var tbody = $("#" + div + "_table tbody");
+            drawTable(dataArr, tbody);
         }else{
             $(this).removeClass('glyphicon-minus').addClass('glyphicon-plus');
             $("#" + div + "_div").hide();
         }
     });
 });
+function drawTable(dataArr, tbodyObj){
+    tbodyObj.empty();
+    var tbody = '';
+   $.each(dataArr,function(){
+        tbody += "<tr>"
+        for(var key in this){
+            tbody += "<td>" + this[key] +"</td>";
+        }
+        tbody += "</tr>";
+    });
+    tbodyObj.append(tbody);
+}
 function drawColumn(){
     Highcharts.data({
         csv: document.getElementById('tsv').innerHTML,
