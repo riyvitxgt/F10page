@@ -333,9 +333,11 @@ $(function(){
 
     $(".chart-nav li").click(function(){
         var id = $(this).parent().attr('id');
+        $("#" + id + " li").removeClass("active");
+        $(this).addClass("active");
         var dataMap;
         var nid = id.replace("_nav","");
-        if(nid == 'hy2_chart_nav'){
+        if(nid == 'hy2_chart'){
             p = q.SecondIndustry;
             dataMap = initData(p, nid);
         }else{
@@ -426,8 +428,14 @@ function initData(data, divId){
 
     var dataMap = {
         "yDesc": yDesc,
-        "unit": "单位:%",
         data: data
+    }
+    if(yAttr == "basicEPS" || yAttr== "netAssetPS"){
+        dataMap.unit = "元/股"
+    }else if(yAttr == "ARTRate" || yAttr == "inventoryTRate"){
+        dataMap.unit = "次";
+    }else{
+        dataMap.unit = "%";
     }
 
    return dataMap;
@@ -459,6 +467,7 @@ function drawTable(dataArr, tbodyObj){
  *
  */
 function drawChart(divId, dataMap) {
+    $("#" + divId).empty();
     $("#"+divId).highcharts({
         title: {
             text: ""
@@ -477,7 +486,7 @@ function drawChart(divId, dataMap) {
         },
         yAxis: {
             title: {
-                text: dataMap.unit
+                text: "单位:" + dataMap.unit
             }
         },
         legend: {
@@ -494,7 +503,7 @@ function drawChart(divId, dataMap) {
         },
 
         tooltip: {
-            pointFormat: '<span>'+ dataMap.yDesc + '</span>:<br/> <b>{point.y:.2f}%</b><br/>'
+            pointFormat: '<span>'+ dataMap.yDesc + '</span>:<br/> <b>{point.y:.2f}' +dataMap.unit +'</b><br/>'
         },
 
         series: [{
