@@ -21,8 +21,8 @@ dl{
 .nav{
     margin-top: 10px;
 }
-#fieldsChart, #fieldsChart2{
-    height: 190px;
+#hy2_chart, #hy3_chart{
+    height: 250px;
     border: 2px solid #dcdcdc;
 }
 .hide-toggle{

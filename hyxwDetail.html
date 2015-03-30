@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#content p{
+			text-indent: 2em;
+		}
+		.pull-right{
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="pathNav" class="col-md-12">
+			<ol class="breadcrumb">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">行业对比</a></li>
+				<li><a href="#">保险</a></li>
+				<li class="active">正文</li>
+			</ol>
+		</div>
+		<h1 class="text-center">行业新闻大是大非副食店</h1>
+		<div><span class="pull-right">2014-04-05</span></div>
+		<div id="content" class="col-md-12">
+			<p>
+
+
+			</p>
+			<script>
+				var content = '来自中国指数研究院的数据显示，2011年12月，全国100个城市住宅平均价格为8809元/平方米，环比11月下降0.25%，自9月以来已连降4个月。        其中，37个城市价格环比上涨，60个城市环比下跌，3个城市环比持平。与上月相比，去年12月价格环比下跌的城市数比上月增加3个，其中12个城市环比跌幅在1%以上。        该报告指出，一、二线城市大型房企部分项目降价的趋势逐步向三、四线城市蔓延，降价楼盘多以新项目为主。        在跌幅榜上，金华、泰州、无锡、佛山、吴江等5个城市位居前列，均为此前房价上涨过快的热点城市，其中金华跌幅超过2%。东营、新乡、衡水、汕头、廊坊则领先涨幅榜，但涨幅均不超过2%。        同比来看，全国100个城市住宅均价涨幅自去年8月以来持续缩小，12月上涨2.86%，较11月缩小1.2个百分点。        与此同时，去年12月十大城市住宅均价为15588元/平方米，环比11月下跌0.48%，跌幅比上月扩大0.12个百分点。具体来看，十大城市住宅价格全部环比下跌，其中重庆（主城区）跌幅较大，环比跌幅为0.89%，深圳、广州、南京、天津跌幅在0.5%~1%之间，上海、北京、杭州、武汉跌幅在0.5%以内。        这份民间报告于每月初发布，与国家统计局的数据相一致的是，报告反映出的房价下跌通道已经确立。按照统计局的数据，2011年11月，全国70个大中城市中，已有49个城市新建商品住宅价格环比下降，上涨的城市仅有5个。';
+				content = content.replace(/[\s]{6}/g,'</p><br><p>');
+				//alert(content);
+				$("p").html(content);
+			</script>
+		</div>
+		<div class="col-md-12">
+			<span class="pull-right">作者:xxxx</span>
+		</div>
+	</div>
+</body>
+</html>
