@@ -2,27 +2,9 @@
  * Created by zhukm on 2015/3/25.
  */
 
-var dataObj = {
-    code: '600570',
-    jc: 'hs',
-    pm: 1,
-    mgsy: 3,
-    mgjzc: 8,
-    mgxjl: 3,
-    jll: 1.2,
-    yysl: 4,
-    zzc: 8,
-    jzcsyl: 2,
-    gdqybl: 3,
-    xsmll: 5,
-    zgb: 4
-}
-
-var dataArr = [dataObj, dataObj, dataObj, dataObj, dataObj];
+var d;
 
 $(function () {
-
-
 
     var q = {
         "SecondIndustry": {
@@ -3110,7 +3092,7 @@ $(function () {
             }], "industryName": "其它专用机械"
         }
     };
-
+    d = q;
     //drawColumn();
     $(".hide-toggle").click(function () {
         var div = $(this).attr('id');
@@ -3124,7 +3106,7 @@ $(function () {
             $("#" + div + "_div").hide();
         }
     });
-    $("table_pager ul li").click(function(){
+    $(".pagination li a").click(function(){
         var id = $(this).parents(".table_pager").attr("id");
         alert(id);
     });
@@ -3142,9 +3124,22 @@ $(function () {
         var dataMap = initData(q, id);
         drawChart(id, dataMap);
     });
-
 });
 
+
+function pageClick(obj){
+    $(obj).parent().siblings().removeClass("active");
+    $(obj).parent().addClass("active");
+    var divId = $(obj).parents(".table_pager").attr("id");
+    var pageNow = $(obj).text();
+    var nid;
+    if(divId == "hy3_pager"){
+        nid = "hy3";
+    }else{
+        nid = "hy2";
+    }
+    drawTable(d, nid,pageNow);
+}
 
 function initData(dataMap, divId) {
     var data;
@@ -3196,11 +3191,9 @@ function drawTablePager(dataMap, divId){
         var navBody = '';
         for(var i = 1; i <= pageCount; i++){
             if(i == 1){
-                navBody += "<li class='active'>" +
-                "<span>1 <span class='sr-only'>(current)</span></span>" +
-                "</li>";
+                navBody += "<li class='active'><a href='javascript:void(0)' onclick='pageClick(this)'>1</a></li>";
             }else{
-                navBody += "<li><a href='#'>" + i + "</a></li>";
+                navBody += "<li><a href='javascript:void(0)' onclick='pageClick(this)'>" + i + "</a></li>";
             }
         }
     }
@@ -3232,7 +3225,6 @@ function drawTable(dataMap, divId, pageNow) {
         tbody += "<td>" + data[i]["name"] + "</td>";
         $.each($("#" + divId + "_chart_nav a"), function(){
             var secuAttr = $(this).attr("name");
-            alert(secuAttr);
             tbody += "<td>" + data[i][secuAttr] + "</td>";
         });
        tbody += "</tr>";
