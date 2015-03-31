@@ -30,7 +30,7 @@
 		<div class="panel-body">
 			<!--三级行业-->
 			<div>
-				<span>三级行业分类: </span><span>电子 -- 电子制造 -- 电子零部件制造 （共<span>21</span>家）</span>
+				<span>三级行业分类: </span><span id="hy3_name"></span>
 
 				<div class="pull-right form-inline">
 					<span>报告期</span>
@@ -48,9 +48,9 @@
 						<li><a data-toggle="tab" name="grossIncomeRatio" href="#">销售毛利率</a></li>
 						<li><a data-toggle="tab" name="netProfitRatio" href="#">销售净利率</a></li>
 						<li><a data-toggle="tab" name="ROE" href="#">净资产收益率</a></li>
-						<li><a data-toggle="tab" name="NPParentCompanyYOY" href="#">归属母公司股东的净利润同比增长</a></li>
-						<li><a data-toggle="tab" name="operProfitGrowRate" href="#">营业利润同比增长</a></li>
-						<li><a data-toggle="tab" name="ARTRate" href="#">应收帐款周转率</a></li>
+						<li><a data-toggle="tab" name="NPParentCompanyYOY" href="#">股东净利润增长</a></li>
+						<li><a data-toggle="tab" name="operProfitGrowRate" href="#">营业利润增长</a></li>
+						<li><a data-toggle="tab" name="ARTRate" href="#">帐款周转率</a></li>
 						<li><a data-toggle="tab" name="inventoryTRate" href="#">存货周转率</a></li>
 						<li><a data-toggle="tab" name="currentRatio" href="#">流动比率</a></li>
 						<li><a data-toggle="tab" name="quickRatio" href="#">速动比率</a></li>
@@ -73,26 +73,35 @@
 					</ul>
 				</div>
 				<div id="hy3_table">
-					<table class="table table-bordered table-hover">
+					<table class="table table-condensed table-bordered table-hover">
 						<thead>
 						<th>股票代码</th>
 						<th>股票简称</th>
-						<th>排名</th>
-						<th>每股收益(元)</th>
-						<th>每股净资产(元)</th>
-						<th>每股现金流(元)</th>
-						<th>净利润(亿元)</th>
-						<th>营业收入(亿元)</th>
-						<th>总资产(亿元)</th>
-						<th>净资产收益率(%)</th>
-						<th>股东权益比例(%)</th>
+						<th>每股收益(元/股)</th>
+						<th>每股净资产(元/股)</th>
 						<th>销售毛利率(%)</th>
-						<th>总股本(亿股)</th>
+						<th>销售净利率(%)</th>
+						<th>净资产收益率(%)</th>
+						<th>股东净利润增长(%)</th>
+						<th>营业利润增长(%)</th>
+						<th>帐款周转率(%)</th>
+						<th>存货周转率(%)</th>
+						<th>流动比率(%)</th>
+						<th>速动比率(%)</th>
 						</thead>
-						<tbody>
+						<tbody id="hy3_tbody">
 						<!--用JS去填充表格内容-->
 						</tbody>
 					</table>
+				</div>
+				<div id="hy3_pager" class="table_pager col-md-12">
+					<nav class="pull-right">
+						<ul class="pagination pagination-sm">
+							<li class="active">
+								<span>1 <span class="sr-only">(current)</span></span>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 			<!--三级行业结束-->
@@ -100,7 +109,7 @@
 			<hr>
 			<!--二级行业-->
 			<div>
-				<span>二级行业分类: </span><span>电子 -- 电子制造 -- 电子零部件制造 （共<span>21</span>家）</span>
+				<span>二级行业分类: </span><span id="hy2_name"></span>
 
 				<div class="pull-right form-inline">
 					<span>报告期</span>
@@ -117,9 +126,9 @@
                             <li><a data-toggle="tab" name="grossIncomeRatio" href="#">销售毛利率</a></li>
                             <li><a data-toggle="tab" name="netProfitRatio" href="#">销售净利率</a></li>
                             <li><a data-toggle="tab" name="ROE" href="#">净资产收益率</a></li>
-                            <li><a data-toggle="tab" name="NPParentCompanyYOY" href="#">归属母公司股东的净利润同比增长</a></li>
-                            <li><a data-toggle="tab" name="operProfitGrowRate" href="#">营业利润同比增长</a></li>
-                            <li><a data-toggle="tab" name="ARTRate" href="#">应收帐款周转率</a></li>
+                            <li><a data-toggle="tab" name="NPParentCompanyYOY" href="#">股东净利润增长</a></li>
+                            <li><a data-toggle="tab" name="operProfitGrowRate" href="#">营业利润增长</a></li>
+                            <li><a data-toggle="tab" name="ARTRate" href="#">帐款周转率</a></li>
                             <li><a data-toggle="tab" name="inventoryTRate" href="#">存货周转率</a></li>
                             <li><a data-toggle="tab" name="currentRatio" href="#">流动比率</a></li>
                             <li><a data-toggle="tab" name="quickRatio" href="#">速动比率</a></li>
@@ -142,26 +151,35 @@
 							</ul>
 						</div>
 						<div id="hy2_table">
-							<table class="table table-bordered table-hover">
+							<table class="table table-condensed  table-bordered table-hover">
 								<thead>
 								<th>股票代码</th>
 								<th>股票简称</th>
-								<th>排名</th>
-								<th>每股收益(元)</th>
+								<th>每股收益(元/股)</th>
 								<th>每股净资产(元)</th>
-								<th>每股现金流(元)</th>
-								<th>净利润(亿元)</th>
-								<th>营业收入(亿元)</th>
-								<th>总资产(亿元)</th>
-								<th>净资产收益率(%)</th>
-								<th>股东权益比例(%)</th>
 								<th>销售毛利率(%)</th>
-								<th>总股本(亿股)</th>
+								<th>销售净利率(%)</th>
+								<th>净资产收益率(%)</th>
+								<th>股东净利润增长(%)</th>
+								<th>营业利润同比增长(%)</th>
+								<th>应收帐款周转率(%)</th>
+								<th>存货周转率(%)</th>
+								<th>流动比率(%)</th>
+								<th>速动比率(%)</th>
 								</thead>
-								<tbody>
+								<tbody id="hy2_tbody">
 
 								</tbody>
 							</table>
+						</div>
+						<div id="hy2_pager" class="table_pager col-md-12">
+							<nav class="pull-right">
+								<ul class="pagination pagination-sm">
+									<li class="active">
+										<span>1 <span class="sr-only">(current)</span></span>
+									</li>
+								</ul>
+							</nav>
 						</div>
 					</div>
 				</div>
